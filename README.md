@@ -22,7 +22,7 @@ console.log(john.firstName);
 
 ### License ISC
 
-Copyright (c) 2015, Company or Person's Name renaitor@gmail.com
+Copyright (c) 2015, Aitor Aznar Álvarez renaitor@gmail.com
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
