@@ -3,10 +3,11 @@ A basic TDD node project with jasmine testing
 
 #### Install dependencies
 * **npm install** : Exec it on the terminal
+* **npm install -g grunt** : Grunt is required
 
 #### Develop
 * **node .** : To launch the app, see the results in the terminal.
-* **grunt dev** : To start developing with jshint and jasmine testing
+* **npm run dev** : To start developing with jshint and jasmine testing
 * **npm test** or **grunt test** : To launch jasmine tests
 
 
