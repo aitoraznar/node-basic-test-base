@@ -4,7 +4,8 @@
   "description": "A basic TDD node project with jasmine testing",
   "main": "src/main/index.js",
   "scripts": {
-    "test": "node test/support/jasmine.js"
+    "test": "node test/support/jasmine.js",
+    "dev": "grunt dev"
   },
   "repository": {
     "type": "git",
@@ -15,11 +16,12 @@
     "email": "renaitor@gmail.com"
   },
   "license": "ISC",
-  "dependencies": {
-    "async": "^1.4.0",
-    "request": "^2.58.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-exec": "^0.4.6",
     "jasmine": "^2.3.2",
     "jasmine-reporters": "^2.0.7"
   }
