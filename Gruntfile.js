@@ -23,42 +23,27 @@ module.exports = function(grunt) {
 
         watch: {
             files: ['<%= jshint.files %>'],
-            tasks: ['jshint', 'jasmine_node']
+            tasks: ['jshint', 'exec:test']
         },
 
-        jasmine_node: {
-            options: {
-                coverage: {
-                    print: 'detail'
-                },
-                
-                forceExit: true,
-                match: '.',
-                matchAll: false,
-                specFolders: ['<%= meta.src.test %>/specs/'],
-                extensions: 'js',
-                captureExceptions: true,
-                junitreport: {
-                  report: false,
-                  savePath : './build/reports/jasmine/',
-                  useDotNotation: true,
-                  consolidate: true
-                },
-                specNameMatcher: 'spec'
-            },
-            all: ['<%= meta.src.main %>']
+        exec: {
+            test: {
+                'cmd': 'npm test',
+                'stdout': true,
+                'stderr': false
+            }
         }
 
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-jasmine-node');
+    grunt.loadNpmTasks('grunt-exec');
 
     // Custom Tasks
-    grunt.registerTask('dev', ['watch']);
-    grunt.registerTask('test', ['jasmine_node']);
+    grunt.registerTask('dev', ['exec:test', 'watch']);
+    grunt.registerTask('test', ['exec:test']);
 
-    grunt.registerTask('default', ['test']);
+    grunt.registerTask('default', ['exec:test']);
 
 };
