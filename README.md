@@ -1,5 +1,5 @@
 A basic TDD node project with jasmine testing
-=================
+===================
 
 #### Install dependencies
 * **npm install** : Exec it on the terminal
